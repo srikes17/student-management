@@ -1,0 +1,30 @@
+*{
+    margin:0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    font-size: 40px;
+    color: cornflowerblue;
+}
+
+body{
+    background-color: azure;
+}
+
+nav{
+    text-align: right;
+}
+
+nav a:hover{
+    color: darkseagreen;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td{
+    padding: 20px;
+}
+
