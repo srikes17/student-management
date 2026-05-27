@@ -1,5 +1,4 @@
 *{
-<<<<<<< HEAD
     margin: 0px;
     font-family: Serif;
 }
@@ -40,34 +39,3 @@ nav a:hover{
     color: yellow;
     text-decoration: underline;
 }
-=======
-    margin:0px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-h1{
-    font-size: 40px;
-    color: cornflowerblue;
-}
-
-body{
-    background-color: azure;
-}
-
-nav{
-    text-align: right;
-}
-
-nav a:hover{
-    color: darkseagreen;
-}
-
-table{
-    border-collapse: collapse;
-}
-
-td{
-    padding: 20px;
-}
-
->>>>>>> 2a5766965286174f088a32231aaa124203617379
