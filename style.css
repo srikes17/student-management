@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    font-family: Serif;
+}
+
+body{
+    background-color: aliceblue;
+    text-align: center;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 50px;
+    margin: 20px;
+    text-transform:capitalize;
+}
+
+p{
+    font-size: 28px;
+    font-weight: 400;
+    margin: 10px;
+}
+
+nav{
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a{
+    color:white;
+    font-size: 40px;
+    margin: 20px;
+    text-transform:capitalize;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
