@@ -14,14 +14,21 @@
     </nav>
     <h1>enter regestration details</h1>
     <div>
-        <form action="./login.html">
+        <form>
             <label for="username">UserName :</label>
-            <input type="text" id="username" required><br>
+            <input type="text" id="username" onchange="usernameChanged(event)" required><br>
+            <label for="email">Email :</label>
+            <input type="text" id="email" onchange="emailChanged(event)" required><br>
+            <label for="age">Age :</label>
+            <input type="number" id="age" onchange="ageChanged(event)" required><br>
             <label for="pass">Password :</label>
-            <input type="text" id="pass" required><br>
-            <button type="submit">register</button>
+            <input type="password" id="pass" onchange="passChanged(event)" required><br>
+            <label for="repass">Retype Password :</label>
+            <input type="password" id="repass" onchange="repassChanged(event)" required><br>
+            <button type="button" onclick="saveUser()">register</button>
         </form>
     </div>
     <p>already have an account?<a href="./login.html">login</a></p>
+    <script src="register.js"></script>
 </body>
 </html>
