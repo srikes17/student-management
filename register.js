@@ -8,7 +8,8 @@ function saveUser(){
     const pass = document.getElementById('pass');
     const repass = document.getElementById('repass');
     
-    if(username.length < 8){
+    const isValidUserName = /^[a-zA-Z0-9]{8}/
+    if(isValidUserName){
         return alert('username length atleast 8 characters')
     }
     
@@ -21,6 +22,16 @@ function saveUser(){
     }
 
     if(pass === repass){
+
+        if(pass.length < 8){
+            return alert('Enter password atleast of 8 characters')
+        }
+        const isStrongPassword = /['@'|'!'|'$'|'#'|'%'|'^'|'&'|'*']/.test(pass) && /[a-z]/.test(pass) && /[A-Z]/.test(pass) && /[0-9]/.test(pass)
+        
+        if(!isStrongPassword){
+            return alert('Enter Strong Password it should contain atleat one alphabet, capital alphabet, number, and special character')
+        }
+        
         localStorage.setItem('user',JSON.stringify({username,email,age,pass}))
         window.location.href = './login.html'
     }
