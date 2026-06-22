@@ -20,22 +20,11 @@ async function deleteRow(idx){
     helper()
 }
 
-function editStudent(student){
-    console.log(student)
-    const {name,branch,rollnumber,cgpa} = student
-    document.getElementById('name').value = name;
-    document.getElementById('branch').value = branch;
-    document.getElementById('rollnumber').value = rollnumber;
-    document.getElementById('cgpa').value = cgpa;
-    window.location.href = './editstd.html'
-
-}
 
 function display(studentsList){
 
     for(let i=0; i<studentsList.length; i++){
         const student = studentsList[i]
-        console.log(student)
         tbody.innerHTML += `
             <tr>
                 <td>${student.rollnumber}</td>
@@ -43,7 +32,9 @@ function display(studentsList){
                 <td>${student.branch}</td>
                 <td>${student.cgpa}</td>
                 <td>
-                    <button class='btn btn-danger' onclick='editStudent()'>Edit</button>
+                    <a href='editstd.html?id=${student.id}'>
+                        <button class='btn btn-danger'>Edit</button>
+                    <a>
                 </td>
                 <td>
                     <button class='btn btn-danger' onclick='deleteRow(${student.id})'>Delete</button>

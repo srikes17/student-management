@@ -10,7 +10,7 @@ async function addStudent(){
 
     const student = {name, branch, rollnumber, cgpa}
 
-    const isBranchValid = /^[(CSE)|(ECE)|(EEE)|(eee)|(cse)|(ece)]/.test(branch)
+    const isBranchValid = /^(CSE|ECE|EEE|eee|cse|ece)$/.test(branch)
 
     if(!isBranchValid){
         return alert('Enter Valid Branch !')
