@@ -1,12 +1,12 @@
 
 
 
-function addStudent(){
+async function addStudent(){
 
     const name = document.getElementById('name').value;
     const branch = document.getElementById('branch').value;
     const rollnumber = document.getElementById('roll').value;
-    const cgpa = document.getElementById('cgpa').value;
+    const cgpa = parseFloat(document.getElementById('cgpa').value);
 
     const student = {name, branch, rollnumber, cgpa}
 
@@ -22,15 +22,20 @@ function addStudent(){
         return alert('Enter Valid Roll Number')
     }
 
-    const CGPA = parseFloat(cgpa)
 
-    if(CGPA <= 4.0 && CGPA >= 10.0){
-        return alert('Enter Valid CGPA !')
+
+    if(cgpa <= 4.0 && cgpa >= 10.0){
+        return alert('Enter Valid cgpa !')
     }
 
-    const studentsList = JSON.parse(localStorage.getItem('studentsList') || '[]')
-
-    localStorage.setItem('studentsList',JSON.stringify([...studentsList,student]))
+    const data = await fetch('http://localhost:8080/students',{
+        method: "POST",
+        headers : {
+            "Content-Type": "application/json"
+        },
+        body : JSON.stringify(student)
+    })
+ 
 
     window.location.href = './viewstd.html'
 }
